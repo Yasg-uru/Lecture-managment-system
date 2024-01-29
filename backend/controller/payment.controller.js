@@ -6,11 +6,7 @@ const User = require("../models/user.model.js");
 const crypto = require("crypto");
 const Razorpay = require("razorpay");
 
-const razorpayinstance = new Razorpay({
-  key_id: "rzp_live_tK7jKIBkQuTeH7",
-  // key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: "d3q0tkLxfFVKoizPqeboYYsm",
-});
+
 exports.Createorder = catchasyncerror(async (req, res, next) => {
   try {
     const { _id } = req.user;
